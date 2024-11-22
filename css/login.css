@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Kdam+Thmor+Pro&family=Montserrat:wght@100&family=Quantico&family=Roboto+Condensed:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root{
+    --container_height:auto;
+    --container_width:300px;
+    /* --container_height:250px;
+    --container_width:300px; */
+    --container_padding:30px 20px;
+    --input_margin_top:25px;
+    --logo_text_color:#776B5D;
+    --logo_font_family:'Quantico', sans-serif;
+    --logo_text_size:22px;
+    --links_text_font:'Kdam Thmor Pro', sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.login{
+    width: var(--container_width);
+    height: var(--container_height);
+    background-color: white;
+    border-radius: 20px;
+    padding: var(--container_padding);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login .logo{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login .logo img{
+    width: 80px;
+    height: 50px;
+}
+
+
+
+
+.login .logo  h3{
+    font-family:var(--logo_font_family);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--logo_text_color);
+    font-size: var(--logo_text_size);
+    display: inline-block;
+}
+
+.login .logo .text h3:last-child{
+    color: black;
+}
+
+
+.login form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form p{
+    color: red;
+    padding: 8px 0;
+    /* margin-bottom: var(--input_margin_top); */
+    /* margin-bottom: ; */
+    display: none;
+}
+
+.login input{
+    margin-bottom: var(--input_margin_top);
+    /* margin-top: var(--input_margin_top); */
+}
+
+.login input[type="text"],input[type="password"]{
+    width: 250px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: rgb(209, 209, 209);
+}
+
+.login input::placeholder{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.login input:focus-visible{
+    border: 2px solid rgba(9,9,121,1);
+}
+
+.login input[type="submit"],input[type="button"]{
+    /* margin-top: 30px; */
+    width: 250px;
+    height: 30px;
+    border-style: none;
+    background-color: rgb(43, 43, 172);
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

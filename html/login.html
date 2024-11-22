@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Home! Login</title>
+    <link rel="shortcut icon" href="../images/Movie logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+            <div class="image">
+                <!-- <img src="../images/Movie logo.png" alt=""> -->
+                <h3>Collection Home!</h3>
+
+            </div>
+            <div class="text">
+                <h3>Login</h3>
+            </div>
+        </div>
+        <form action="admin_home.html" method="post" autocomplete="off">
+            <input type="text" name="uid" placeholder="Username" id="username">
+            <input type="password" name="pwd" placeholder="password" id="password">
+            <p id="wrong">Invalid credentials. Please try again.</p>
+            <input type="button" value="Login" onclick="validateLogin()">
+           
+        </form>
+    </div>
+    <script src="../js/loginhardcode.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="shortcut icon" href="../images/Movie logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/theaters.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Collection Home! Theaters</title>
+</head>
+<body>    
+    <div class="main">   
+        <div class="nav">
+            <div class="logo border">
+                <a href="admin_home.html"><img src="../images/Movie logo.png" alt=""></a>
+                <h3>Collection Home!</h3>
+            </div>
+            <div class="links border">
+                <ul>
+                    <li class="active"><a href="admin_theaters.html">theatres</a></li>
+                    <li><a href="admin_collection.html">Collections</a></li>
+                    <li><a href="admin_movies.html">Movies</a></li>
+                </ul>
+            </div>
+            <div class="logout border">
+                <div class="user">
+                    <h3 id="logout_btn">Admin</h3>
+                    <i class="fa fa-sort-desc" id="drop_d" aria-hidden="true"></i>
+                    <i class="fa fa-sort-desc" id="drop_u" aria-hidden="true"></i>
+
+                </div>
+              
+                <img src="../Images/Contact.png" alt="profile" class="image">
+                <div class="logout_btn" id="logout">
+                    <div class="btn">
+                        <ul>
+                            <li>
+                                <a href="login.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="arrow"></div>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content" id="con">
+            <div class="body_content">
+                <div class="search">
+                    <div class="s_bar">
+                        <form action="#" method="post">
+                            <input type="text" placeholder="Search Theater By Name">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="add_movie_btn">
+                        <button id="movie_btn">ADD Theater<i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="container" id="top">
+                    <div class="filter_container">
+                            <h1>Filters</h1>
+                            <div class="filters_form">
+                                <form action="">
+                                    <div class="location_container">
+                                        <h4>Location</h4>
+                                        <div class="loc_checks">
+                                            <input type="checkbox" name="vskp" id="vskp" value=""> <label for="vskp">Visakhapatnam</label> <br>
+                                            <input type="checkbox" name="gajuwaka" id="gajuwaka" value="gajuwaka"> <label for="gajuwaka">Gajuwaka</label> <br>
+                                            <input type="checkbox" name="paravada" id="paravada" value="paravada"> <label for="paravada">Parawada</label> <br>
+                                            <input type="checkbox" name="jagadamba" id="jagadamba" value="jagadamba"> <label for="jagadamba">Jagadamba</label> <br>
+                                            <input type="checkbox" name="Gopalapatnam" id="Gopalapatnam" value="Gopalapatnam"> <label for="Gopalapatnam">Gopalapatnam</label> <br>
+                                            <input type="checkbox" name="madhurawada" id="madhurawada" value="madhurawada"> <label for="madhurawada">Madhurawada</label> <br>
+                                            <input type="checkbox" name="yelamanchili" id="yelamanchili" value="yelamanchili"> <label for="yelamanchili">Yelamanchili</label> <br>
+                                            <input type="checkbox" name="waltair" id="waltair" value="waltair"> <label for="waltair">Waltair</label> <br>
+                                            <input type="checkbox" name="siripuram" id="siripuram" value="siripuram"> <label for="siripuram">Siripuram</label> <br>
+                                            <input type="checkbox" name="sabavaram" id="sabavaram" value="sabavaram"> <label for="sabavaram">Sabbavaram</label> <br>    
+                                        </div>
+                                    </div>
+
+                                    <div class="location_container">
+                                        <h4>Screen</h4>
+
+                                        <div class="loc_checks">
+                                            <input type="checkbox" name="single_screen" id="single_screen" value="single_screen"> <label for="single_screen">Single Screen</label> <br>
+                                            <input type="checkbox" name="multiples" id="multiples" value="multiples"> <label for="multiples">Multiplex</label> <br>
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                    </div>
+                    <div class="theater_container">
+                       <div class="theater_header">
+                            <div class="left_details">
+                                <div>Theater Name</div>
+                                <div>Location</div>
+                                <div>Screen</div>
+                            </div>
+                            <div class="right_btns"></div>
+                       </div>
+                       <div class="theater_list">
+                            
+                        <!-- box -->
+                            <div class="theater_box">
+                                <div class="th_box_top" onclick="toggleAccordion(this)">
+                                    <div class="left_details left_box">
+                                        <div>Mohini</div>
+                                        <div>Gajuwaka</div>
+                                        <div>Single Screen</div>
+                                        <!-- <div>Visakhapatnam</div> -->
+                                    </div>
+                                    <div class="right_btns">
+                                        <div class="th_ud_btns">Edit</div>
+                                        <div class="th_ud_btns">Delete</div>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="th_box_bottom">
+                                    <div class="th_bottom_details">
+                                        <div class="content_column">
+                                            <h2>Theater info</h2>
+                                            <div class="info">
+                                                <div class="text">
+                                                    <p>Theater Name</p>
+                                                    <span>:</span>
+                                                    <p>Mohini</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>District</p>
+                                                    <span>:</span>
+                                                    <p>Visakhapatnam</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Location</p>
+                                                    <span>:</span>
+                                                    <p>Gajuwaka</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Screen</p>
+                                                    <span>:</span>
+                                                    <p>Single Screen</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Code</p>
+                                                    <span>:</span>
+                                                    <p>001</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Full Gross</p>
+                                                    <span>:</span>
+                                                    <p>120000</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="content_column">
+                                            <h2>Credentials</h2>
+                                            <div class="info">
+                                                <div class="text">
+                                                    <p>User Name</p>
+                                                    <span>:</span>
+                                                    <p>Mohini</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Password</p>
+                                                    <span>:</span>
+                                                    <p>pass1</p>
+                                                </div>
+
+                                                
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="content_column">
+                                            <h2>Weekly Share</h2>
+                                            <div class="info">
+                                                <div class="text">
+                                                    <p>Week 1</p>
+                                                    <span>:</span>
+                                                    <p>50%</p>
+                                                </div>
+
+                                                <div class="text">
+                                                    <p>Week 2</p>
+                                                    <span>:</span>
+                                                    <p>65%</p>
+                                                </div>
+                                                
+                                                <div class="text">
+                                                    <p>Week 3</p>
+                                                    <span>:</span>
+                                                    <p>70%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- box -->
+                             <div class="theater_box">
+                                <div class="th_box_top" onclick="toggleAccordion(this)">
+                                    <div class="left_details left_box">
+                                        <div>STBL</div>
+                                        <div>Sheela Nagar</div>
+                                        <div>Multiplex</div>
+                                    </div>
+                                    <div class="right_btns">
+                                        <div class="th_ud_btns">Edit</div>
+                                        <div class="th_ud_btns">Delete</div>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="th_box_bottom">
+                                    <div class="th_bottom_details">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- box -->
+                             <div class="theater_box">
+                                <div class="th_box_top" onclick="toggleAccordion(this)">
+                                    <div class="left_details left_box">
+                                        <div>SVC Likitha</div>
+                                        <div>Malkapuram</div>
+                                        <div>Single Screen</div>
+                                    </div>
+                                    <div class="right_btns">
+                                        <div class="th_ud_btns">Edit</div>
+                                        <div class="th_ud_btns">Delete</div>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="th_box_bottom">
+                                    <div class="th_bottom_details">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- box -->
+                             <div class="theater_box">
+                                <div class="th_box_top" onclick="toggleAccordion(this)">
+                                    <div class="left_details left_box">
+                                        <div>Seetharamaya</div>
+                                        <div>Parawada</div>
+                                        <div>Single Screen</div>
+                                    </div>
+                                    <div class="right_btns">
+                                        <div class="th_ud_btns">Edit</div>
+                                        <div class="th_ud_btns">Delete</div>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="th_box_bottom">
+                                    <div class="th_bottom_details">
+                                        
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <!-- box -->
+                            <div class="theater_box">
+                                <div class="th_box_top" onclick="toggleAccordion(this)">
+                                    <div class="left_details left_box">
+                                        <div>varun INOX</div>
+                                        <div>Visakhapatnam</div>
+                                        <div>Multiplex</div>
+                                    </div>
+                                    <div class="right_btns">
+                                        <div class="th_ud_btns">Edit</div>
+                                        <div class="th_ud_btns">Delete</div>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="th_box_bottom">
+                                    <div class="th_bottom_details">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                           
+                            
+                       </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_container">
+                    <div class="footer_logo">
+                        <img src="../images/Movie logo.png" alt="">
+                        <h3>Collection Home!</h3>
+                    </div>
+                    <div class="footer_info">
+                        <div class="footer_con_quote">
+                            <div class="footer_contact">
+                                <div class="heading">
+                                    <h4>Contact Admin</h4>
+                                </div>
+                                <div class="footer_contact_details">
+                                    <table>
+                                        <tr>
+                                            <td id="bold">Mail Id</td>
+                                            <td>:</td>
+                                            <td>Adminmail12@email.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="bold">Phone</td>
+                                            <td>:</td>
+                                            <td>+91 12345 67890</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="bold">LandLine</td>
+                                            <td>:</td>
+                                            <td>0871 - 142536</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="footer_quote">
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eos accusantium, nihil tempora a consequatur hic velit deserunt incidunt molestias laboriosam vel nesciunt sint minus ex officiis! Soluta, suscipit debitis?</p> -->
+                            </div>
+                        </div>
+                        <div class="footer_copyright">
+                            <div class="right">
+                                <i class="fa fa-copyright" aria-hidden="true"></i><p>2023 CopyRight and all rights Reserved By <b>COLLECTION HOME!</b> </p>   
+                            </div>
+                            <div class="maintain">
+                                <h3>Design and Maintain By</h3>
+                                <h3>LeoDoesIT</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+    <script src="../js/accordian copy.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/admin_movie.js"></script>
+</body>
+</html>
